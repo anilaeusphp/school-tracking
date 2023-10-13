@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_12_075524) do
+ActiveRecord::Schema.define(version: 2023_10_12_083611) do
 
 # Could not dump table "users" because of following StandardError
 #   Unknown type 'inet' for column 'current_sign_in_ip'

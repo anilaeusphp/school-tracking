@@ -1,4 +1,7 @@
-
-<% @users.each do |user| %>
-  <%= render "users/user", user: user %>
+<% if @users.size > 0 %>
+  <% @users.each do |user| %>
+    <%= render "users/user", user: user %>
+  <% end %>
+<% else %>
+  No user
 <% end %>
