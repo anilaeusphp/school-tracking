@@ -9,7 +9,7 @@ class User < ApplicationRecord
          :confirmable,
          :trackable,
          :lockable,
-         :omniauthable, omniauth_providers: [:google_oauth2]
+         :omniauthable, omniauth_providers: [:google_oauth2, :github]
 
 
 
