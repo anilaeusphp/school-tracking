@@ -36,3 +36,7 @@ gem "ruby-graphviz", "~> 1.2"
 gem "devise", "~> 4.9"
 
 gem "erb-formatter", "~> 0.4.3"
+
+gem "omniauth", "~> 2.1"
+gem "omniauth-google-oauth2", "~> 1.1"
+gem "omniauth-rails_csrf_protection", "~> 1.0"

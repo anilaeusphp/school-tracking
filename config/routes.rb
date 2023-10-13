@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {confirmations: 'confirmations'}
+  devise_for :users, controllers: {confirmations: 'confirmations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users, only: [:index, :show, :destroy] do
     member do
