@@ -16,3 +16,4 @@ import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 require("stylesheets/application.scss")
 import "@fortawesome/fontawesome-free/css/all"
+global.toastr=require("toastr")

@@ -42,3 +42,5 @@ gem "omniauth-google-oauth2", "~> 1.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 
 gem "omniauth-github", "~> 2.0"
+
+gem "devise_invitable", "~> 2.0"

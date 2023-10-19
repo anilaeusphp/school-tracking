@@ -8,6 +8,9 @@
 <strong>Last Sign In Ip:</strong> <%= user.last_sign_in_ip %><br />
 <strong>User Locked:</strong> <%= user.locked_at %><br />
 <strong>Created At:</strong> <%= user.created_at %><br />
+<% if user.invited_by %>
+<strong>Invited By: </strong><%= user.invited_by.name %><br />
+<% end %>
 
 <strong>Provider:</strong> <%= user.provider %><br />
 
@@ -17,8 +20,14 @@
 
 <strong>Image:</strong> <%= image_tag user.image, style: "width:30px; height: 30px; border-radius:100%" if user.image %><br />
 
+<strong>Roles:</strong> <%= user.active_roles.join(", ") %><br />
+
+
 <div class="d-flex align-items-center gap-2 mt-2">
-<%= link_to ban_status(user), ban_user_path(user), method: :patch , class: 'btn btn-info' %>
-<%= button_to "Delete", user, method: :delete ,class: "btn btn-danger", data: {confirm: "Are you certain?"} %>
+<% if current_user.admin? %>
+    <%= link_to "Edit Roles", edit_user_path(user), class: "btn btn-warning" %>
+    <%= link_to ban_status(user), ban_user_path(user), method: :patch , class: 'btn btn-info' %>
+    <%= button_to "Delete", user, method: :delete ,class: "btn btn-danger", data: {confirm: "Are you certain?"} %>
+<% end %>
 </div>
-<hr>
+<hr />
